@@ -1,0 +1,7 @@
+@font-face {
+  font-family: Pony;
+  src: url("./../assets/images/Pony.ttf");
+}
+.redux_ex {
+  font-family: Pony;
+}
