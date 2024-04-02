@@ -4,6 +4,7 @@ import XucXac from "./XucXac";
 import KetQua from "./KetQua";
 import { useSelector, useDispatch } from "react-redux";
 import { kiemTraKetQua } from "../Ex_Redux/slice/xiNgau";
+import Header from "../layout/Header/Header";
 // import bgGame from "./../assets/image/bgGame.png";
 const Ex_Redux = () => {
   // Yêu cầu: thực hiện nhìn trên giao diện, viết báo cáo về các dữ liệu sẽ thay đổi, một số phương thức sẽ chạy khi người dùng thao tác với các thẻ đang có trên giao diện
@@ -22,6 +23,7 @@ const Ex_Redux = () => {
       // style={{ backgroundImage: `url(${bgGame})` }}
       style={{ backgroundImage: `url(./image/bgGame.png)` }}
     >
+      {/* <Header /> */}
       <div className="container">
         <h1 className="text-7xl">Game đổ xúc xắc</h1>
         {/* nút chức năng  */}

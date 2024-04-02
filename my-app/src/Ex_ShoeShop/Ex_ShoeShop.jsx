@@ -4,8 +4,12 @@ import { useState } from "react";
 
 import ListShoe from "./ListShoe";
 import CartModal from "./CartModal";
+import Header from "../layout/Header/Header";
+import { useParams } from "react-router-dom";
 
 const Ex_ShoeShop = () => {
+  const { id } = useParams();
+  console.log(id);
   let [isOpen, setIsOpen] = useState(false);
   let [arrCart, setArrCart] = useState([]);
   console.log(arrCart);
@@ -206,6 +210,7 @@ const Ex_ShoeShop = () => {
   };
   return (
     <div className="container mx-auto py-10">
+      {/* <Header /> */}
       <h1 className="font-bold text-3xl text-center">Bài tập danh sách giày</h1>
       {/* giỏ hàng */}
       <div className="shoe_cart">
@@ -217,7 +222,10 @@ const Ex_ShoeShop = () => {
         </button>
       </div>
       {/* danh sách giày */}
-      <ListShoe addShoeCart={addShoeCart} listShoe={arrShoe} />
+      <ListShoe
+        addShoeCart={addShoeCart}
+        listShoe={arrShoe.filter((item) => item.id == id)}
+      />
       {/* modal hiển thị giỏ hàng */}
       {/* Yêu cầu: thực hiện quản lí modal hiển thị danh sách sản phẩm đã chọn mua thông qua component cartModal */}
       <CartModal
